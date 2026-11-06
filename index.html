@@ -2,386 +2,605 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Rohan Biswal — Conversational AI Lead</title>
-<meta name="description" content="Rohan Biswal — Conversational AI lead and prompt engineer designing chatbots, voicebots and LLM solutions.">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%239AA8FF'/%3E%3Ctext x='32' y='42' font-family='Arial' font-weight='700' font-size='26' text-anchor='middle' fill='%230B0D12'%3ERB%3C/text%3E%3C/svg%3E">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Rohan Biswal — Conversational AI Lead &amp; Prompt Engineer</title>
+<meta name="description" content="Rohan Biswal designs, prompts and ships chat, voice and GenAI experiences. Try the portfolio bot.">
+<meta property="og:title" content="Rohan Biswal — Conversational AI Lead &amp; Prompt Engineer">
+<meta property="og:description" content="I design conversations that machines get right. Ask my portfolio bot anything.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cpath d='M8 14a10 10 0 0 1 10-10h28a10 10 0 0 1 10 10v24a10 10 0 0 1-10 10H26l-12 10V48h-2a4 4 0 0 1-4-4z' fill='%233046E8'/%3E%3Ctext x='32' y='34' font-family='Arial' font-weight='700' font-size='20' text-anchor='middle' fill='%23fff'%3ERB%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&amp;family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Instrument+Sans:wght@400;500;600&display=swap">
 <style>
-body{margin:0;background:#0B0D12}
-a{color:#ECEEF2;text-decoration:none}
-a:hover{color:#FFFFFF}
-.nav-link{color:#A7AFBD;transition:color .15s}
-.nav-link:hover{color:#FFFFFF}
-.btn-primary{transition:transform .15s, filter .15s}
-.btn-primary:hover{transform:translateY(-2px);filter:brightness(1.08);color:#0B0D12}
-.btn-ghost{transition:border-color .15s, background .15s}
-.btn-ghost:hover{border-color:#5A6275;background:#151924}
-.card{transition:border-color .2s, transform .2s}
-.card:hover{border-color:#343B4C;transform:translateY(-3px)}
-.dot{animation:blink 1.2s infinite ease-in-out}
-.dot2{animation-delay:.2s}.dot3{animation-delay:.4s}
-@keyframes blink{0%,80%,100%{opacity:.25}40%{opacity:1}}
-@media (max-width:720px){
-.hdr{padding:16px 20px !important;gap:12px !important}
-.site-nav{width:100%;flex-wrap:nowrap !important;overflow-x:auto;gap:22px !important;padding-bottom:4px;scrollbar-width:none;-webkit-overflow-scrolling:touch}
-.site-nav::-webkit-scrollbar{display:none}
-.site-nav a{white-space:nowrap;flex:none}
-.hero{padding:48px 20px 64px !important}
-.hero-grid{gap:40px !important}
-.hero-title{font-size:38px !important;line-height:1.06 !important}
-.sec{padding:72px 20px !important}
-.sec-b{padding-left:20px !important;padding-right:20px !important;padding-bottom:72px !important}
-.impact-cell{border-right:none !important;border-bottom:1px solid #1C202B;padding:28px 20px !important}
-.impact-cell:last-child{border-bottom:none}
-.impact-cell > span:first-child{font-size:44px !important}
-.edu-meta{align-items:flex-start !important}
-.contact-links{min-width:0 !important;width:100%}
-.contact-links a{font-size:15px;overflow-wrap:anywhere;padding:12px 18px !important}
-.card{padding:22px !important}
+:root{
+  --ground:#EEF0F7; --surface:#FFFFFF; --sunken:#E3E6F1;
+  --ink:#161A33; --muted:#4F5573; --line:#D3D7E6;
+  --bot:#3046E8; --on-bot:#FFFFFF; --bot-soft:#DDE1FF;
+  --user:#FFD23F; --on-user:#161A33;
+  --focus:#3046E8;
+  color-scheme:light;
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px);
+  padding-bottom:env(safe-area-inset-bottom,0px);
 }
-@media (prefers-reduced-motion:reduce){.dot{animation:none}.card,.btn-primary{transition:none}}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --ground:#0F1229; --surface:#181C3B; --sunken:#121530;
+    --ink:#EEF0FA; --muted:#A4AACA; --line:#2B3058;
+    --bot:#4F60F5; --on-bot:#FFFFFF; --bot-soft:#262C63;
+    --user:#FFD23F; --on-user:#161A33; --focus:#9EA9FF;
+    color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --ground:#0F1229; --surface:#181C3B; --sunken:#121530;
+  --ink:#EEF0FA; --muted:#A4AACA; --line:#2B3058;
+  --bot:#4F60F5; --on-bot:#FFFFFF; --bot-soft:#262C63;
+  --user:#FFD23F; --on-user:#161A33; --focus:#9EA9FF;
+  color-scheme:dark;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:calc(env(safe-area-inset-top,0px) + 80px)}
+body{margin:0;background:var(--ground);color:var(--ink);font-family:"Instrument Sans",system-ui,-apple-system,"Segoe UI",sans-serif;font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:30;background:var(--ground)}
+img,svg{max-width:100%}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--focus);outline-offset:3px;border-radius:6px}
+.wrap{max-width:1200px;margin:0 auto;padding:0 24px}
+.display{font-family:"Bricolage Grotesque","Instrument Sans",sans-serif;letter-spacing:-.02em;line-height:1.02;font-weight:800}
+h2.display{font-size:clamp(34px,4.4vw,56px);margin:0 0 16px}
+.lede{color:var(--muted);max-width:60ch;margin:0}
+.btn{display:inline-flex;align-items:center;gap:10px;min-height:48px;padding:0 22px;border-radius:999px;font-weight:600;font-size:16px;text-decoration:none;border:2px solid transparent;cursor:pointer;font-family:inherit;transition:transform .15s ease,background .15s ease}
+.btn:hover{transform:translateY(-1px)}
+.btn-bot{background:var(--bot);color:var(--on-bot)}
+.btn-user{background:var(--user);color:var(--on-user)}
+.btn-line{border-color:var(--ink);color:var(--ink);background:transparent}
+.btn-line:hover{background:var(--surface)}
+
+/* header */
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:color-mix(in srgb,var(--ground) 88%,transparent);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.hdr{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:68px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;font-family:"Bricolage Grotesque",sans-serif;font-weight:700;font-size:19px}
+.brand-mark{width:38px;height:32px;border-radius:12px 12px 12px 4px;background:var(--bot);color:var(--on-bot);display:grid;place-items:center;font-size:14px;font-weight:800}
+.nav{display:flex;align-items:center;gap:26px;font-size:15px}
+.nav a{text-decoration:none;color:var(--muted)}
+.nav a:hover{color:var(--ink)}
+.nav .btn{min-height:42px;padding:0 18px;font-size:15px;color:var(--on-user)}
+
+/* hero */
+.hero{padding:72px 0 88px}
+.hero-grid{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);gap:56px;align-items:center}
+.role{display:inline-block;margin:0 0 22px;color:var(--muted);font-weight:500}
+.hero h1{font-size:clamp(46px,6vw,84px);margin:0 0 24px}
+.hero .lede{font-size:19px;margin-bottom:32px}
+.cta-row{display:flex;flex-wrap:wrap;gap:12px}
+.meta{display:flex;flex-wrap:wrap;gap:20px;margin-top:28px;color:var(--muted);font-size:15px}
+.meta span,.meta a{display:inline-flex;align-items:center;gap:8px;text-decoration:none}
+.meta a:hover{color:var(--ink)}
+
+/* chat */
+.chat{background:var(--surface);border:1px solid var(--line);border-radius:28px;box-shadow:0 30px 60px -30px rgba(22,26,51,.35);display:flex;flex-direction:column;height:560px;overflow:hidden}
+.chat-head{display:flex;align-items:center;gap:12px;padding:16px 18px;border-bottom:1px solid var(--line)}
+.avatar{width:40px;height:40px;border-radius:50%;background:var(--bot);color:var(--on-bot);display:grid;place-items:center;font-weight:700;font-size:14px;flex:none}
+.chat-title{flex:1;min-width:0;line-height:1.3}
+.chat-title strong{display:block;font-size:16px}
+.chat-title span{font-size:13px;color:var(--muted)}
+.toggle{display:inline-flex;align-items:center;gap:8px;min-height:44px;padding:0 12px;border-radius:999px;border:1px solid var(--line);background:var(--ground);color:var(--ink);font-family:inherit;font-weight:500;font-size:13px;line-height:1;cursor:pointer;white-space:nowrap}
+.toggle .sw{width:30px;height:18px;border-radius:9px;background:var(--line);position:relative;transition:background .15s}
+.toggle .sw::after{content:"";position:absolute;top:2px;left:2px;width:14px;height:14px;border-radius:50%;background:var(--surface);transition:transform .15s}
+.toggle[aria-pressed="true"] .sw{background:var(--bot)}
+.toggle[aria-pressed="true"] .sw::after{transform:translateX(12px)}
+.log{flex:1;overflow-y:auto;padding:20px 18px;display:flex;flex-direction:column;gap:10px;scroll-behavior:smooth;overscroll-behavior:contain}
+.msg{max-width:86%;padding:11px 15px;border-radius:20px;font-size:15.5px;line-height:1.5;animation:pop .22s ease-out}
+.msg.bot{align-self:flex-start;background:var(--bot);color:var(--on-bot);border-bottom-left-radius:6px}
+.msg.user{align-self:flex-end;background:var(--user);color:var(--on-user);border-bottom-right-radius:6px}
+.msg ul{margin:6px 0 0;padding-left:18px}
+.msg li+li{margin-top:3px}
+.msg-actions{align-self:flex-start;display:flex;flex-wrap:wrap;gap:8px;margin-top:-2px}
+.msg-actions a{display:inline-flex;align-items:center;gap:6px;min-height:40px;padding:0 14px;border-radius:999px;border:1.5px solid var(--bot);color:var(--bot);text-decoration:none;font-weight:600;font-size:14px;background:var(--surface)}
+:root[data-theme="dark"] .msg-actions a{color:#B8C0FF;border-color:#7F8CFF}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .msg-actions a{color:#B8C0FF;border-color:#7F8CFF}}
+.nlu{display:none;align-self:flex-end;font-size:12.5px;color:var(--muted);background:var(--sunken);border:1px dashed var(--line);border-radius:10px;padding:5px 10px;margin-top:-4px}
+.nlu b{color:var(--ink);font-weight:600}
+.show-nlu .nlu{display:block}
+.typing{align-self:flex-start;display:flex;gap:5px;padding:14px 16px;border-radius:20px 20px 20px 6px;background:var(--bot-soft)}
+.typing i{width:7px;height:7px;border-radius:50%;background:var(--bot);animation:blink 1.1s infinite ease-in-out}
+.typing i:nth-child(2){animation-delay:.18s}.typing i:nth-child(3){animation-delay:.36s}
+@keyframes blink{0%,80%,100%{opacity:.25}40%{opacity:1}}
+@keyframes pop{from{opacity:0;transform:translateY(6px) scale(.98)}to{opacity:1;transform:none}}
+.suggest{display:flex;gap:8px;overflow-x:auto;padding:10px 18px 4px;scrollbar-width:none}
+.suggest::-webkit-scrollbar{display:none}
+.chip{flex:none;min-height:40px;padding:0 14px;border-radius:999px;border:1.5px solid var(--line);background:var(--ground);color:var(--ink);font-family:inherit;font-weight:500;font-size:14px;line-height:1;cursor:pointer;white-space:nowrap}
+.chip:hover{border-color:var(--bot)}
+.composer{display:flex;gap:8px;padding:10px 14px 14px}
+.composer label{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+.composer input{flex:1;min-width:0;min-height:48px;padding:0 16px;border-radius:999px;border:1.5px solid var(--line);background:var(--ground);color:var(--ink);font-family:inherit;font-size:16px}
+.composer input::placeholder{color:var(--muted)}
+.composer button{width:48px;height:48px;flex:none;border-radius:50%;border:0;background:var(--bot);color:var(--on-bot);display:grid;place-items:center;cursor:pointer}
+
+/* results */
+.results{border-block:1px solid var(--line);background:var(--surface)}
+.results-grid{display:grid;grid-template-columns:repeat(4,1fr)}
+.result{padding:34px 24px 34px 0}
+.result + .result{padding-left:24px;border-left:1px solid var(--line)}
+.result strong{display:block;font-family:"Bricolage Grotesque",sans-serif;font-weight:800;font-size:52px;line-height:1;letter-spacing:-.03em;margin-bottom:10px}
+.result span{color:var(--muted);font-size:15px}
+
+section.block{padding:112px 0}
+
+/* anatomy */
+.anat{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,.75fr);gap:28px;margin-top:44px;align-items:start}
+.prompt{background:var(--ink);color:#E6E8F5;border-radius:24px;padding:28px;font-size:16px;line-height:1.75}
+:root[data-theme="dark"] .prompt{background:#090B1C}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .prompt{background:#090B1C}}
+.prompt-top{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;color:#A9AECB;font-size:14px;margin-bottom:16px}
+.seg{display:block;width:100%;text-align:left;font:inherit;color:inherit;background:transparent;border:0;border-left:4px solid #3A3F66;padding:8px 14px;margin:4px 0;border-radius:0 12px 12px 0;cursor:pointer;transition:background .15s,border-color .15s}
+.seg:hover{background:rgba(255,255,255,.05)}
+.seg[aria-pressed="true"]{background:rgba(255,210,63,.12);border-left-color:var(--user)}
+.seg small{display:block;font-size:12.5px;color:#A9AECB;font-weight:600;margin-bottom:2px}
+.seg[aria-pressed="true"] small{color:var(--user)}
+.why{background:var(--surface);border:1px solid var(--line);border-radius:24px;padding:28px;position:sticky;top:96px}
+.why h3{font-family:"Bricolage Grotesque",sans-serif;font-size:26px;margin:0 0 10px;letter-spacing:-.01em}
+.why p{margin:0;color:var(--muted)}
+.why .hint{margin-top:18px;font-size:14px}
+.steps{list-style:none;margin:56px 0 0;padding:0;display:grid;grid-template-columns:repeat(4,1fr);gap:0;counter-reset:s}
+.steps li{counter-increment:s;padding:0 24px 0 0;position:relative}
+.steps li::before{content:counter(s);display:grid;place-items:center;width:40px;height:40px;border-radius:50%;background:var(--bot);color:var(--on-bot);font-weight:700;margin-bottom:16px;position:relative;z-index:1}
+.steps li::after{content:"";position:absolute;top:20px;left:40px;right:0;height:2px;background:var(--line)}
+.steps li:last-child::after{display:none}
+.steps h3{margin:0 0 6px;font-size:19px;font-family:"Bricolage Grotesque",sans-serif}
+.steps p{margin:0;color:var(--muted);font-size:15.5px}
+
+/* experience */
+.exp{display:grid;grid-template-columns:300px minmax(0,1fr);gap:40px;margin-top:44px}
+.tabs{display:flex;flex-direction:column;gap:6px}
+.tab{text-align:left;font:inherit;color:var(--ink);background:transparent;border:1.5px solid transparent;border-radius:18px;padding:14px 18px;cursor:pointer;min-height:44px}
+.tab span{display:block;font-size:14px;color:var(--muted)}
+.tab strong{font-family:"Bricolage Grotesque",sans-serif;font-size:20px;font-weight:700}
+.tab:hover{background:var(--surface)}
+.tab[aria-selected="true"]{background:var(--surface);border-color:var(--bot)}
+.panel{background:var(--surface);border:1px solid var(--line);border-radius:28px;padding:36px}
+.panel[hidden]{display:none}
+.panel h3{font-family:"Bricolage Grotesque",sans-serif;font-size:30px;margin:0;letter-spacing:-.015em}
+.panel .r{color:var(--muted);margin:4px 0 18px}
+.panel .sum{font-size:19px;margin:0 0 18px;max-width:58ch}
+.panel ul{margin:0;padding-left:20px;color:var(--muted)}
+.panel li+li{margin-top:8px}
+.tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:22px;padding:0;list-style:none}
+.tags li{margin:0 !important;padding:6px 12px;border-radius:999px;background:var(--bot-soft);color:var(--ink);font-size:14px}
+
+/* toolkit */
+.kit{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;margin-top:44px}
+.kit div{border-top:3px solid var(--ink);padding-top:18px}
+.kit h3{margin:0 0 12px;font-family:"Bricolage Grotesque",sans-serif;font-size:21px}
+.kit ul{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:8px}
+.kit li{padding:6px 12px;border:1px solid var(--line);border-radius:999px;font-size:14.5px;background:var(--surface)}
+
+/* education */
+.edu{margin-top:36px;border-top:1px solid var(--line)}
+.edu-row{display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px 24px;padding:22px 0;border-bottom:1px solid var(--line)}
+.edu-row strong{font-family:"Bricolage Grotesque",sans-serif;font-size:21px;display:block}
+.edu-row span{color:var(--muted)}
+.edu-row .y{text-align:right}
+
+/* hire */
+.hire{background:var(--bot);color:var(--on-bot);border-radius:36px;padding:clamp(36px,6vw,80px);display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,.8fr);gap:40px;align-items:end;position:relative;overflow:hidden}
+.hire h2{font-size:clamp(44px,6vw,84px);margin:0 0 16px}
+.hire p{margin:0;opacity:.9;max-width:46ch;font-size:19px}
+.hire-actions{display:flex;flex-direction:column;gap:12px}
+.hire-actions .btn{justify-content:center;min-height:56px;font-size:17px}
+.hire .btn-line{border-color:#fff;color:#fff}
+.hire .btn-line:hover{background:rgba(255,255,255,.1)}
+.email{overflow-wrap:anywhere}
+
+footer{padding:40px 0 48px;color:var(--muted);font-size:15px}
+footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px}
+
+@media (max-width:980px){
+  .hero-grid,.anat,.exp,.hire{grid-template-columns:1fr}
+  .why{position:static}
+  .results-grid{grid-template-columns:repeat(2,1fr)}
+  .result,.result + .result{padding:26px 20px;border-left:0}
+  .result:nth-child(odd){padding-left:0}
+  .result:nth-child(even){border-left:1px solid var(--line)}
+  .result:nth-child(n+3){border-top:1px solid var(--line)}
+  .steps{grid-template-columns:repeat(2,1fr);row-gap:36px}
+  .steps li:nth-child(2)::after{display:none}
+  .kit{grid-template-columns:repeat(2,1fr)}
+  .tabs{flex-direction:row;overflow-x:auto;scrollbar-width:none;padding-bottom:4px}
+  .tabs::-webkit-scrollbar{display:none}
+  .tab{flex:none}
+}
+@media (max-width:720px){
+  .wrap{padding:0 20px}
+  body{font-size:16px}
+  .nav a:not(.btn){display:none}
+  .hero{padding:40px 0 56px}
+  .hero-grid{gap:36px}
+  .hero h1{font-size:44px}
+  .hero .lede{font-size:17px}
+  .chat{height:500px;border-radius:24px}
+  .toggle .lbl-long{display:none}
+  section.block{padding:72px 0}
+  .result strong{font-size:40px}
+  .result span{font-size:14px}
+  .steps,.kit{grid-template-columns:1fr}
+  .steps li::after{display:none}
+  .prompt{padding:20px;font-size:15px}
+  .panel{padding:24px;border-radius:22px}
+  .panel h3{font-size:25px}
+  .panel .sum{font-size:17px}
+  .edu-row .y{text-align:left}
+  .hire{border-radius:28px}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation:none !important;transition:none !important}
+}
 </style>
-<style>html{scroll-behavior:smooth}section[id]{scroll-margin-top:16px}</style>
 </head>
 <body>
-<div style="min-height: 100vh; background: #0B0D12; color: #ECEEF2; font-family: 'Inter', system-ui, -apple-system, sans-serif; font-size: 16px; line-height: 1.6; overflow-x: hidden">
 
-<!-- NAV -->
-<header style="position: relative; z-index: 2; border-bottom: 1px solid #1C202B">
-<div class="hdr" style="max-width: 1200px; margin: 0 auto; padding: 20px 24px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px">
-<a href="#top" style="display: flex; align-items: center; gap: 12px; font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 18px; letter-spacing: 0.02em">
-<span style="width: 36px; height: 36px; border-radius: 10px; background: #9AA8FF; color: #0B0D12; display: flex; align-items: center; justify-content: center; font-size: 15px">RB</span>
-Rohan Biswal
-</a>
-<nav class="site-nav" aria-label="Primary" style="display: flex; flex-wrap: wrap; align-items: center; gap: 28px; font-size: 15px">
-<a class="nav-link" href="#approach">Approach</a>
-<a class="nav-link" href="#experience">Experience</a>
-<a class="nav-link" href="#skills">Skills</a>
-<a class="nav-link" href="#education">Education</a>
-<a class="nav-link" href="#resume">Resume</a>
-<a class="btn-primary" href="mailto:rohanbiswal12345@gmail.com" style="background: #9AA8FF; color: #0B0D12; font-weight: 600; padding: 11px 18px; border-radius: 999px; min-height: 44px; box-sizing: border-box; display: inline-flex; align-items: center">Let’s talk</a>
-</nav>
-</div>
+<header>
+  <div class="wrap hdr">
+    <a class="brand" href="#top"><span class="brand-mark">RB</span>Rohan Biswal</a>
+    <nav class="nav" aria-label="Primary">
+      <a href="#how">How I work</a>
+      <a href="#experience">Experience</a>
+      <a href="#toolkit">Toolkit</a>
+      <a class="btn btn-user" href="#hire">Hire me</a>
+    </nav>
+  </div>
 </header>
 
-<!-- HERO -->
-<section id="top" class="hero" style="position: relative; padding: 96px 24px 104px">
-<div aria-hidden="true" style="position: absolute; top: -120px; right: -120px; width: 620px; height: 620px; border-radius: 50%; background: #9AA8FF; opacity: 0.10; filter: blur(120px)"></div>
-<div class="hero-grid" style="position: relative; max-width: 1200px; margin: 0 auto; display: flex; flex-wrap: wrap; align-items: center; gap: 64px">
+<main id="top">
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <p class="role">Senior CxD Designer (Prompt Engineer) at Optum</p>
+        <h1 class="display">I design conversations that machines get right.</h1>
+        <p class="lede">Conversational AI lead and prompt engineer with 6+ years designing, building and scaling chatbots, voicebots and LLM solutions for Fortune 500 clients in pharma, banking, retail and healthcare.</p>
+        <div class="cta-row">
+          <a class="btn btn-bot" href="#hire">Hire me</a>
+          <a class="btn btn-line" href="#experience">See my work</a>
+        </div>
+        <div class="meta">
+          <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>Bangalore, India</span>
+          <a href="https://www.linkedin.com/in/rohanbiswal" target="_blank" rel="noopener noreferrer"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M8 10v7M8 7v.01M12 17v-4a2 2 0 0 1 4 0v4M12 10v7"/></svg>linkedin/rohanbiswal</a>
+        </div>
+      </div>
 
-<div style="flex: 1 1 520px; min-width: 0; display: flex; flex-direction: column; gap: 28px">
-<div style="display: inline-flex; align-self: flex-start; align-items: center; gap: 10px; padding: 8px 14px; border: 1px solid #262B38; border-radius: 999px; font-family: 'JetBrains Mono', monospace; font-size: 13px; color: #A7AFBD">
-<span style="width: 8px; height: 8px; border-radius: 50%; background: #5BD69A"></span>
-Senior CxD Designer · Prompt Engineer at Optum
-</div>
-<h1 class="hero-title" style="margin: 0; font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: clamp(44px, 6.4vw, 84px); line-height: 1.02; letter-spacing: -0.03em">I design conversations that <span style="color: #9AA8FF">machines get right.</span></h1>
-<p style="margin: 0; max-width: 580px; font-size: 19px; line-height: 1.65; color: #A7AFBD">Conversational AI lead and prompt engineer with 6+ years designing, building and scaling chatbots, voicebots and LLM solutions for Fortune 500 clients in pharma, banking, retail and healthcare.</p>
-<div style="display: flex; flex-wrap: wrap; gap: 14px; padding-top: 4px">
-<a class="btn-primary" href="mailto:rohanbiswal12345@gmail.com" style="display: inline-flex; align-items: center; gap: 10px; min-height: 52px; padding: 0 26px; border-radius: 999px; background: #9AA8FF; color: #0B0D12; font-weight: 600; box-sizing: border-box">
-Get in touch
-<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg>
-</a>
-<a class="btn-ghost" href="#experience" style="display: inline-flex; align-items: center; min-height: 52px; padding: 0 26px; border-radius: 999px; border: 1px solid #343B4C; font-weight: 500; box-sizing: border-box">See my work</a>
-</div>
-<div style="display: flex; flex-wrap: wrap; gap: 24px; font-size: 14px; color: #A7AFBD; padding-top: 8px">
-<span style="display: inline-flex; align-items: center; gap: 8px"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"></path><circle cx="12" cy="9.5" r="2.5"></circle></svg>Bangalore, India</span>
-<a class="nav-link" href="https://www.linkedin.com/in/rohanbiswal" style="display: inline-flex; align-items: center; gap: 8px"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="3"></rect><path d="M8 10v7M8 7v.01M12 17v-4a2 2 0 0 1 4 0v4M12 10v7"></path></svg>linkedin/rohanbiswal</a>
-</div>
-</div>
+      <div class="chat" id="chat" aria-label="Portfolio bot">
+        <div class="chat-head">
+          <span class="avatar" aria-hidden="true">RB</span>
+          <div class="chat-title"><strong>Ask my portfolio bot</strong><span>Built the way I build real bots</span></div>
+          <button class="toggle" id="nluToggle" type="button" aria-pressed="false" title="Show the intent and confidence the bot detected"><span class="sw" aria-hidden="true"></span><span><span class="lbl-long">Show </span>NLU</span></button>
+        </div>
+        <div class="log" id="log" role="log" aria-live="polite"></div>
+        <div class="suggest" id="suggest" aria-label="Suggested questions"></div>
+        <form class="composer" id="composer" autocomplete="off">
+          <label for="ask">Ask a question about Rohan</label>
+          <input id="ask" name="ask" type="text" placeholder="Ask about my work…" maxlength="160">
+          <button type="submit" aria-label="Send"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+        </form>
+      </div>
+    </div>
+  </section>
 
-<!-- chat card -->
-<div style="flex: 1 1 400px; min-width: 0; max-width: 480px">
-<div style="background: #12151D; border: 1px solid #232835; border-radius: 24px; box-shadow: 0 40px 80px -30px rgba(0,0,0,0.6); overflow: hidden">
-<div style="display: flex; align-items: center; justify-content: space-between; padding: 16px 20px; border-bottom: 1px solid #1F2430">
-<div style="display: flex; align-items: center; gap: 12px">
-<span style="width: 34px; height: 34px; border-radius: 50%; background: #1E2330; display: flex; align-items: center; justify-content: center; color: #9AA8FF">
-<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="7" width="16" height="12" rx="3"></rect><path d="M12 3v4M9 13h.01M15 13h.01"></path></svg>
-</span>
-<div style="display: flex; flex-direction: column; line-height: 1.3">
-<span style="font-weight: 600; font-size: 14px">Rohan’s assistant</span>
-<span style="font-size: 12px; color: #5BD69A">● online</span>
-</div>
-</div>
-<span style="font-family: 'JetBrains Mono', monospace; font-size: 12px; color: #8A93A3">v5.0 · RAG</span>
-</div>
-<div style="display: flex; flex-direction: column; gap: 14px; padding: 24px 20px 28px">
-<div style="align-self: flex-end; max-width: 80%; background: #232836; padding: 12px 16px; border-radius: 18px 18px 4px 18px; font-size: 15px">Who is Rohan?</div>
-<div style="align-self: flex-start; max-width: 86%; background: #9AA8FF; color: #0B0D12; padding: 12px 16px; border-radius: 18px 18px 18px 4px; font-size: 15px; line-height: 1.55">A conversational AI lead who designs, prompts and ships chat and voice bots — from first flow to production LLM.</div>
-<div style="align-self: flex-end; max-width: 80%; background: #232836; padding: 12px 16px; border-radius: 18px 18px 4px 18px; font-size: 15px">What has he shipped?</div>
-<div style="align-self: flex-start; max-width: 86%; background: #9AA8FF; color: #0B0D12; padding: 12px 16px; border-radius: 18px 18px 18px 4px; font-size: 15px; line-height: 1.55">Bots for a top‑5 global pharma company, Jio’s high‑traffic platforms, and healthcare GenAI at Optum.</div>
-<div style="align-self: flex-start; display: flex; gap: 6px; background: #1A1E29; padding: 14px 16px; border-radius: 18px 18px 18px 4px" aria-label="Typing">
-<span class="dot" style="width: 7px; height: 7px; border-radius: 50%; background: #A7AFBD"></span>
-<span class="dot dot2" style="width: 7px; height: 7px; border-radius: 50%; background: #A7AFBD"></span>
-<span class="dot dot3" style="width: 7px; height: 7px; border-radius: 50%; background: #A7AFBD"></span>
-</div>
-</div>
-<div style="margin: 0 20px 20px; display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 12px 16px; border: 1px solid #262B38; border-radius: 14px; color: #8A93A3; font-size: 14px">
-<span>Ask about prompt engineering…</span>
-<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 2 11 13M22 2l-7 20-4-9-9-4 20-7z"></path></svg>
-</div>
-</div>
-</div>
-</div>
-</section>
+  <section class="results" aria-label="Results">
+    <div class="wrap results-grid">
+      <div class="result"><strong>50%</strong><span>fewer escalations to human agents with RAG‑powered LLM bots</span></div>
+      <div class="result"><strong>70%</strong><span>of manual case-handling steps automated via API &amp; webhook integrations</span></div>
+      <div class="result"><strong>25%+</strong><span>drop in user drop-offs through research and conversational audits</span></div>
+      <div class="result"><strong>6+ yrs</strong><span>building chat, voice and GenAI for Fortune 500 clients</span></div>
+    </div>
+  </section>
 
-<!-- IMPACT -->
-<section aria-label="Impact" style="border-top: 1px solid #1C202B; border-bottom: 1px solid #1C202B; background: #0E1118">
-<div style="max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr))">
-<div class="impact-cell" style="padding: 44px 28px; border-right: 1px solid #1C202B; display: flex; flex-direction: column; gap: 8px">
-<span style="font-family: 'Space Grotesk', sans-serif; font-size: 56px; font-weight: 700; line-height: 1; letter-spacing: -0.03em; color: #9AA8FF">70%</span>
-<span style="color: #A7AFBD; font-size: 15px">of manual case-handling steps automated via API &amp; webhook integrations</span>
-</div>
-<div class="impact-cell" style="padding: 44px 28px; border-right: 1px solid #1C202B; display: flex; flex-direction: column; gap: 8px">
-<span style="font-family: 'Space Grotesk', sans-serif; font-size: 56px; font-weight: 700; line-height: 1; letter-spacing: -0.03em">50%</span>
-<span style="color: #A7AFBD; font-size: 15px">fewer escalations to human agents with RAG‑powered LLM bots</span>
-</div>
-<div class="impact-cell" style="padding: 44px 28px; border-right: 1px solid #1C202B; display: flex; flex-direction: column; gap: 8px">
-<span style="font-family: 'Space Grotesk', sans-serif; font-size: 56px; font-weight: 700; line-height: 1; letter-spacing: -0.03em">25%+</span>
-<span style="color: #A7AFBD; font-size: 15px">drop in user drop-offs through research and conversational audits</span>
-</div>
-<div class="impact-cell" style="padding: 44px 28px; display: flex; flex-direction: column; gap: 8px">
-<span style="font-family: 'Space Grotesk', sans-serif; font-size: 56px; font-weight: 700; line-height: 1; letter-spacing: -0.03em">6+ yrs</span>
-<span style="color: #A7AFBD; font-size: 15px">building chat, voice and GenAI for Fortune 500 clients</span>
-</div>
-</div>
-</section>
+  <section class="block" id="how">
+    <div class="wrap">
+      <h2 class="display">Prompts aren’t written once. They’re living systems.</h2>
+      <p class="lede">Every line in a production prompt is there for a reason. Tap a part of this example to see why.</p>
 
-<!-- APPROACH -->
-<section id="approach" class="sec" style="padding: 120px 24px">
-<div style="max-width: 1200px; margin: 0 auto; display: flex; flex-direction: column; gap: 56px">
-<div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 24px">
-<div style="display: flex; flex-direction: column; gap: 14px; max-width: 640px">
-<span style="font-family: 'JetBrains Mono', monospace; font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase; color: #9AA8FF">01 — Approach</span>
-<h2 style="margin: 0; font-family: 'Space Grotesk', sans-serif; font-size: clamp(34px, 4vw, 52px); line-height: 1.08; letter-spacing: -0.025em; font-weight: 700">Prompts aren’t written once. They’re living systems.</h2>
-</div>
-<p style="margin: 0; max-width: 420px; color: #A7AFBD; font-size: 17px">I treat every production prompt as a pipeline — designed with users in mind, tested hard, and refined with real feedback.</p>
-</div>
-<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 20px">
-<div class="card" style="background: #12151D; border: 1px solid #222734; border-radius: 20px; padding: 28px; display: flex; flex-direction: column; gap: 14px">
-<span style="font-family: 'JetBrains Mono', monospace; font-size: 13px; color: #8A93A3">step_01</span>
-<h3 style="margin: 0; font-family: 'Space Grotesk', sans-serif; font-size: 22px; font-weight: 600">Design the conversation</h3>
-<p style="margin: 0; color: #A7AFBD; font-size: 15px">User-centred flows, intents and entities built on real behaviour and business goals.</p>
-</div>
-<div class="card" style="background: #12151D; border: 1px solid #222734; border-radius: 20px; padding: 28px; display: flex; flex-direction: column; gap: 14px">
-<span style="font-family: 'JetBrains Mono', monospace; font-size: 13px; color: #8A93A3">step_02</span>
-<h3 style="margin: 0; font-family: 'Space Grotesk', sans-serif; font-size: 22px; font-weight: 600">Engineer the prompt</h3>
-<p style="margin: 0; color: #A7AFBD; font-size: 15px">Translate requirements into reliable LLM behaviour, grounded with RAG on internal data.</p>
-</div>
-<div class="card" style="background: #12151D; border: 1px solid #222734; border-radius: 20px; padding: 28px; display: flex; flex-direction: column; gap: 14px">
-<span style="font-family: 'JetBrains Mono', monospace; font-size: 13px; color: #8A93A3">step_03</span>
-<h3 style="margin: 0; font-family: 'Space Grotesk', sans-serif; font-size: 22px; font-weight: 600">Build past the limits</h3>
-<p style="margin: 0; color: #A7AFBD; font-size: 15px">Custom Python and Node.js logic where low-code platforms run out of road.</p>
-</div>
-<div class="card" style="background: #12151D; border: 1px solid #222734; border-radius: 20px; padding: 28px; display: flex; flex-direction: column; gap: 14px">
-<span style="font-family: 'JetBrains Mono', monospace; font-size: 13px; color: #8A93A3">step_04</span>
-<h3 style="margin: 0; font-family: 'Space Grotesk', sans-serif; font-size: 22px; font-weight: 600">Test, measure, repeat</h3>
-<p style="margin: 0; color: #A7AFBD; font-size: 15px">A/B experiments, analytics reviews and feedback loops that keep quality climbing.</p>
-</div>
-</div>
-</div>
-</section>
+      <div class="anat">
+        <div class="prompt">
+          <div class="prompt-top"><span>system prompt</span><span>Illustrative example, not a client prompt</span></div>
+          <button class="seg" type="button" data-k="role" aria-pressed="true"><small>Role</small>You are the booking assistant for a clinic network. You help patients find and book appointments.</button>
+          <button class="seg" type="button" data-k="context" aria-pressed="false"><small>Grounding</small>Answer only from the schedules and policies in &lt;context&gt;. If the answer isn’t there, say so.</button>
+          <button class="seg" type="button" data-k="rules" aria-pressed="false"><small>Guardrails</small>Never give medical advice. Confirm date, time and location before booking. Ask one question at a time.</button>
+          <button class="seg" type="button" data-k="fallback" aria-pressed="false"><small>Fallback</small>If you still can’t understand the request after two tries, offer to connect the patient to a human agent.</button>
+          <button class="seg" type="button" data-k="format" aria-pressed="false"><small>Output</small>Reply in under 60 words, in plain language, with at most one question.</button>
+        </div>
+        <div class="why" aria-live="polite">
+          <h3 id="whyTitle">Role</h3>
+          <p id="whyText">A clear role sets scope before anything else. The model knows who it serves and, just as importantly, what it isn’t there to do.</p>
+          <p class="hint" id="whyHint">Tap another part of the prompt.</p>
+        </div>
+      </div>
 
-<!-- EXPERIENCE -->
-<section id="experience" class="sec-b" style="padding: 40px 24px 120px">
-<div style="max-width: 1200px; margin: 0 auto; display: flex; flex-direction: column; gap: 48px">
-<div style="display: flex; flex-direction: column; gap: 14px">
-<span style="font-family: 'JetBrains Mono', monospace; font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase; color: #9AA8FF">02 — Experience</span>
-<h2 style="margin: 0; font-family: 'Space Grotesk', sans-serif; font-size: clamp(34px, 4vw, 52px); line-height: 1.08; letter-spacing: -0.025em; font-weight: 700">Where I’ve built</h2>
-</div>
+      <ol class="steps" aria-label="How a prompt reaches production">
+        <li><h3>Design the conversation</h3><p>User-centred flows, intents and entities built on real behaviour and business goals.</p></li>
+        <li><h3>Engineer the prompt</h3><p>Translate requirements into reliable LLM behaviour, grounded with RAG on internal data.</p></li>
+        <li><h3>Build past the limits</h3><p>Custom Python and Node.js logic where low-code platforms run out of road.</p></li>
+        <li><h3>Test, measure, repeat</h3><p>A/B experiments, analytics reviews and feedback loops that keep quality climbing.</p></li>
+      </ol>
+    </div>
+  </section>
 
-<div style="display: flex; flex-direction: column; border-top: 1px solid #1F2430">
+  <section class="block" id="experience" style="padding-top:0">
+    <div class="wrap">
+      <h2 class="display">Where I’ve built</h2>
+      <div class="exp">
+        <div class="tabs" role="tablist" aria-label="Companies">
+          <button class="tab" role="tab" id="t-optum" aria-controls="p-optum" aria-selected="true"><span>Nov 2025 – present</span><strong>Optum</strong></button>
+          <button class="tab" role="tab" id="t-mresult" aria-controls="p-mresult" aria-selected="false" tabindex="-1"><span>Aug 2023 – Nov 2025</span><strong>MResult Services</strong></button>
+          <button class="tab" role="tab" id="t-haptik" aria-controls="p-haptik" aria-selected="false" tabindex="-1"><span>Apr 2021 – Jul 2023</span><strong>Haptik</strong></button>
+          <button class="tab" role="tab" id="t-letsalign" aria-controls="p-letsalign" aria-selected="false" tabindex="-1"><span>Apr 2020 – Mar 2021</span><strong>LetsAlign</strong></button>
+        </div>
+        <div>
+          <div class="panel" role="tabpanel" id="p-optum" aria-labelledby="t-optum" tabindex="0">
+            <h3>Optum Global Solutions</h3>
+            <p class="r">Senior CxD Designer (Prompt Engineer)</p>
+            <p class="sum">Building and refining AI voice and chat experiences that streamline healthcare workflows and improve case resolution.</p>
+            <ul>
+              <li>Design, test and optimise prompts for production LLM systems — reliable, scalable and user-centric.</li>
+              <li>Partner with product, engineering and AI teams end-to-end, from experience design to prompt implementation.</li>
+              <li>Own the CxD perspective on GenAI features, balancing design principles with LLM behaviour and constraints.</li>
+            </ul>
+          </div>
+          <div class="panel" role="tabpanel" id="p-mresult" aria-labelledby="t-mresult" tabindex="0" hidden>
+            <h3>MResult Services</h3>
+            <p class="r">Tech Lead — Lead Conversational AI Consultant</p>
+            <p class="sum">Led the full build of chatbots and voicebots for Fortune 500 clients, including a top‑5 global pharmaceutical company.</p>
+            <ul>
+              <li>Cut escalations to human agents by 50% by applying RAG with LLMs for real-time access to internal data.</li>
+              <li>Automated up to 70% of manual case-handling steps with API and webhook integrations into CRM systems.</li>
+              <li>Architected compliant intents, entities and fulfilment across Genesys, Kore.ai and Salesforce.</li>
+            </ul>
+            <ul class="tags"><li>Genesys</li><li>Kore.ai</li><li>Salesforce</li><li>RAG</li><li>Python</li><li>Node.js</li></ul>
+          </div>
+          <div class="panel" role="tabpanel" id="p-haptik" aria-labelledby="t-haptik" tabindex="0" hidden>
+            <h3>Haptik, via LetsAlign</h3>
+            <p class="r">Conversation AI Consultant</p>
+            <p class="sum">Designed conversational AI for Jio’s high-traffic platforms, grounded in real user behaviour.</p>
+            <ul>
+              <li>Cut drop-offs by 25%+ through user research and conversational audits.</li>
+              <li>Boosted engagement by 20–30% by continuously tuning live bot performance on real usage data.</li>
+              <li>Mentored junior designers and set team standards for UX writing and design systems.</li>
+            </ul>
+          </div>
+          <div class="panel" role="tabpanel" id="p-letsalign" aria-labelledby="t-letsalign" tabindex="0" hidden>
+            <h3>LetsAlign</h3>
+            <p class="r">Software Engineer</p>
+            <p class="sum">Built voice-first Google Actions and Alexa Skills that automated everyday business workflows.</p>
+            <ul>
+              <li>Designed NLU interaction models, tuning accuracy and response times across business scenarios.</li>
+              <li>Engineered IoT home automation with Raspberry Pi, NodeMCU and IFTTT for natural voice control.</li>
+              <li>Primary technical liaison across 8+ client projects; delivered web and Shopify builds lifting leads 20–30%.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-<article style="display: flex; flex-wrap: wrap; gap: 24px 48px; padding: 40px 0; border-bottom: 1px solid #1F2430">
-<div style="flex: 1 1 280px; display: flex; flex-direction: column; gap: 6px">
-<span style="font-family: 'JetBrains Mono', monospace; font-size: 13px; color: #9AA8FF">Nov 2025 — Present</span>
-<h3 style="margin: 0; font-family: 'Space Grotesk', sans-serif; font-size: 26px; font-weight: 600; letter-spacing: -0.01em">Optum Global Solutions</h3>
-<span style="color: #A7AFBD; font-size: 15px">Senior CxD Designer (Prompt Engineer)</span>
-</div>
-<div style="flex: 999 1 520px; min-width: 0; display: flex; flex-direction: column; gap: 14px">
-<p style="margin: 0; font-size: 17px; color: #D6DAE2">Building and refining AI voice and chat experiences that streamline healthcare workflows and improve case resolution.</p>
-<ul style="margin: 0; padding-left: 20px; display: flex; flex-direction: column; gap: 8px; color: #A7AFBD; font-size: 15px">
-<li>Design, test and optimise prompts for production LLM systems — reliable, scalable and user-centric.</li>
-<li>Partner with product, engineering and AI teams end-to-end, from experience design to prompt implementation.</li>
-<li>Own the CxD perspective on GenAI features, balancing design principles with LLM behaviour and constraints.</li>
-</ul>
-</div>
-</article>
+  <section class="block" id="toolkit" style="padding-top:0">
+    <div class="wrap">
+      <h2 class="display">Designer × developer</h2>
+      <div class="kit">
+        <div><h3>Conversational AI</h3><ul><li>Chatbot design</li><li>Voicebot design</li><li>ASR</li><li>TTS</li><li>Digital avatars</li><li>Intent &amp; entity modelling</li></ul></div>
+        <div><h3>Generative AI</h3><ul><li>Prompt engineering</li><li>LLMs</li><li>NLP</li><li>NLU</li><li>RAG</li></ul></div>
+        <div><h3>Platforms &amp; code</h3><ul><li>Kore.ai</li><li>Genesys</li><li>Dialogflow</li><li>Salesforce</li><li>Python</li><li>Node.js</li><li>REST APIs</li><li>SQL</li></ul></div>
+        <div><h3>Delivery</h3><ul><li>Agile</li><li>Client communication</li><li>UX writing</li><li>Usability testing</li><li>A/B testing</li><li>Mentoring</li></ul></div>
+      </div>
 
-<article style="display: flex; flex-wrap: wrap; gap: 24px 48px; padding: 40px 0; border-bottom: 1px solid #1F2430">
-<div style="flex: 1 1 280px; display: flex; flex-direction: column; gap: 6px">
-<span style="font-family: 'JetBrains Mono', monospace; font-size: 13px; color: #9AA8FF">Aug 2023 — Nov 2025</span>
-<h3 style="margin: 0; font-family: 'Space Grotesk', sans-serif; font-size: 26px; font-weight: 600; letter-spacing: -0.01em">MResult Services</h3>
-<span style="color: #A7AFBD; font-size: 15px">Tech Lead — Lead Conversational AI Consultant</span>
-</div>
-<div style="flex: 999 1 520px; min-width: 0; display: flex; flex-direction: column; gap: 14px">
-<p style="margin: 0; font-size: 17px; color: #D6DAE2">Led the full build of chatbots and voicebots for Fortune 500 clients, including a top‑5 global pharmaceutical company.</p>
-<ul style="margin: 0; padding-left: 20px; display: flex; flex-direction: column; gap: 8px; color: #A7AFBD; font-size: 15px">
-<li>Cut escalations to human agents by 50% by applying RAG with LLMs for real-time access to internal data.</li>
-<li>Automated up to 70% of manual case-handling steps with API and webhook integrations into CRM systems.</li>
-<li>Architected compliant intents, entities and fulfilment across Genesys, Kore.ai and Salesforce.</li>
-</ul>
-<div style="display: flex; flex-wrap: wrap; gap: 8px; padding-top: 4px">
-<span style="font-size: 13px; padding: 5px 12px; border-radius: 999px; background: #1A1E29; color: #C3C9D4">Genesys</span>
-<span style="font-size: 13px; padding: 5px 12px; border-radius: 999px; background: #1A1E29; color: #C3C9D4">Kore.ai</span>
-<span style="font-size: 13px; padding: 5px 12px; border-radius: 999px; background: #1A1E29; color: #C3C9D4">Salesforce</span>
-<span style="font-size: 13px; padding: 5px 12px; border-radius: 999px; background: #1A1E29; color: #C3C9D4">RAG</span>
-<span style="font-size: 13px; padding: 5px 12px; border-radius: 999px; background: #1A1E29; color: #C3C9D4">Python · Node.js</span>
-</div>
-</div>
-</article>
+      <h2 class="display" style="margin-top:96px">Grounded in computer science</h2>
+      <div class="edu">
+        <div class="edu-row"><div><strong>Master of Computer Applications</strong><span>Kalinga Institute of Industrial Technology</span></div><div class="y"><strong>2021</strong><span>8.06 CGPA</span></div></div>
+        <div class="edu-row"><div><strong>B.Sc. Computer Science</strong><span>KC College, University of Mumbai</span></div><div class="y"><strong>2019</strong><span>8.76 CGPA</span></div></div>
+        <div class="edu-row"><div><strong>GNIIT, Cloud &amp; Mobile Software Engineering</strong><span>NIIT Limited</span></div><div class="y"><strong>Grade A</strong></div></div>
+      </div>
+    </div>
+  </section>
 
-<article style="display: flex; flex-wrap: wrap; gap: 24px 48px; padding: 40px 0; border-bottom: 1px solid #1F2430">
-<div style="flex: 1 1 280px; display: flex; flex-direction: column; gap: 6px">
-<span style="font-family: 'JetBrains Mono', monospace; font-size: 13px; color: #9AA8FF">Apr 2021 — Jul 2023</span>
-<h3 style="margin: 0; font-family: 'Space Grotesk', sans-serif; font-size: 26px; font-weight: 600; letter-spacing: -0.01em">Haptik <span style="font-weight: 500; color: #8A93A3; font-size: 18px">via LetsAlign</span></h3>
-<span style="color: #A7AFBD; font-size: 15px">Conversation AI Consultant</span>
-</div>
-<div style="flex: 999 1 520px; min-width: 0; display: flex; flex-direction: column; gap: 14px">
-<p style="margin: 0; font-size: 17px; color: #D6DAE2">Designed conversational AI for Jio’s high-traffic platforms, grounded in real user behaviour.</p>
-<ul style="margin: 0; padding-left: 20px; display: flex; flex-direction: column; gap: 8px; color: #A7AFBD; font-size: 15px">
-<li>Cut drop-offs by 25%+ through user research and conversational audits.</li>
-<li>Boosted engagement by 20–30% by continuously tuning live bot performance on real usage data.</li>
-<li>Mentored junior designers and set team standards for UX writing and design systems.</li>
-</ul>
-</div>
-</article>
+  <section class="block" id="hire" style="padding-top:0">
+    <div class="wrap">
+      <div class="hire">
+        <div>
+          <h2 class="display">Want to hire me?</h2>
+          <p>Open to conversations about conversational AI, prompt engineering and GenAI product work.</p>
+        </div>
+        <div class="hire-actions">
+          <a class="btn btn-user" href="https://drive.google.com/drive/folders/1J_nAT-VkVMBk7RbEAHFF4E6pAlUC2xEJ?usp=drive_link" target="_blank" rel="noopener noreferrer"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v11M7 10l5 5 5-5M5 20h14"/></svg>Download resume</a>
+          <a class="btn btn-line email" href="mailto:rohanbiswal12345@gmail.com">rohanbiswal12345@gmail.com</a>
+          <a class="btn btn-line" href="https://www.linkedin.com/in/rohanbiswal" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
 
-<article style="display: flex; flex-wrap: wrap; gap: 24px 48px; padding: 40px 0; border-bottom: 1px solid #1F2430">
-<div style="flex: 1 1 280px; display: flex; flex-direction: column; gap: 6px">
-<span style="font-family: 'JetBrains Mono', monospace; font-size: 13px; color: #9AA8FF">Apr 2020 — Mar 2021</span>
-<h3 style="margin: 0; font-family: 'Space Grotesk', sans-serif; font-size: 26px; font-weight: 600; letter-spacing: -0.01em">LetsAlign</h3>
-<span style="color: #A7AFBD; font-size: 15px">Software Engineer</span>
-</div>
-<div style="flex: 999 1 520px; min-width: 0; display: flex; flex-direction: column; gap: 14px">
-<p style="margin: 0; font-size: 17px; color: #D6DAE2">Built voice-first Google Actions and Alexa Skills that automated everyday business workflows.</p>
-<ul style="margin: 0; padding-left: 20px; display: flex; flex-direction: column; gap: 8px; color: #A7AFBD; font-size: 15px">
-<li>Designed NLU interaction models, tuning accuracy and response times across business scenarios.</li>
-<li>Engineered IoT home automation with Raspberry Pi, NodeMCU and IFTTT for natural voice control.</li>
-<li>Primary technical liaison across 8+ client projects; delivered web and Shopify builds lifting leads 20–30%.</li>
-</ul>
-</div>
-</article>
-
-</div>
-</div>
-</section>
-
-<!-- SKILLS -->
-<section id="skills" class="sec" style="padding: 120px 24px; background: #0E1118; border-top: 1px solid #1C202B; border-bottom: 1px solid #1C202B">
-<div style="max-width: 1200px; margin: 0 auto; display: flex; flex-direction: column; gap: 48px">
-<div style="display: flex; flex-direction: column; gap: 14px">
-<span style="font-family: 'JetBrains Mono', monospace; font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase; color: #9AA8FF">03 — Toolkit</span>
-<h2 style="margin: 0; font-family: 'Space Grotesk', sans-serif; font-size: clamp(34px, 4vw, 52px); line-height: 1.08; letter-spacing: -0.025em; font-weight: 700">Designer × developer</h2>
-</div>
-<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px">
-
-<div class="card" style="background: #12151D; border: 1px solid #222734; border-radius: 20px; padding: 28px; display: flex; flex-direction: column; gap: 18px">
-<span style="width: 44px; height: 44px; border-radius: 12px; background: #1E2330; color: #9AA8FF; display: flex; align-items: center; justify-content: center"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 20l1-4.6A8 8 0 1 1 21 12z"></path></svg></span>
-<h3 style="margin: 0; font-family: 'Space Grotesk', sans-serif; font-size: 21px; font-weight: 600">Conversational AI</h3>
-<p style="margin: 0; color: #A7AFBD; font-size: 15px">Chatbot &amp; voicebot design, conversation design, ASR, TTS, digital avatars, intent/entity modelling.</p>
-</div>
-
-<div class="card" style="background: #12151D; border: 1px solid #222734; border-radius: 20px; padding: 28px; display: flex; flex-direction: column; gap: 18px">
-<span style="width: 44px; height: 44px; border-radius: 12px; background: #1E2330; color: #9AA8FF; display: flex; align-items: center; justify-content: center"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l1.9 5.1L19 10l-5.1 1.9L12 17l-1.9-5.1L5 10l5.1-1.9z"></path><path d="M19 17l.7 1.8 1.8.7-1.8.7L19 22l-.7-1.8-1.8-.7 1.8-.7z"></path></svg></span>
-<h3 style="margin: 0; font-family: 'Space Grotesk', sans-serif; font-size: 21px; font-weight: 600">Generative AI</h3>
-<p style="margin: 0; color: #A7AFBD; font-size: 15px">Prompt engineering, LLMs, NLP, NLU and retrieval-augmented generation (RAG).</p>
-</div>
-
-<div class="card" style="background: #12151D; border: 1px solid #222734; border-radius: 20px; padding: 28px; display: flex; flex-direction: column; gap: 18px">
-<span style="width: 44px; height: 44px; border-radius: 12px; background: #1E2330; color: #9AA8FF; display: flex; align-items: center; justify-content: center"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 7l-5 5 5 5M16 7l5 5-5 5M14 4l-4 16"></path></svg></span>
-<h3 style="margin: 0; font-family: 'Space Grotesk', sans-serif; font-size: 21px; font-weight: 600">Platforms &amp; code</h3>
-<p style="margin: 0; color: #A7AFBD; font-size: 15px">Kore.ai, Genesys, Dialogflow, Salesforce, Python, JavaScript/Node.js, JSON, REST APIs, SQL.</p>
-</div>
-
-<div class="card" style="background: #12151D; border: 1px solid #222734; border-radius: 20px; padding: 28px; display: flex; flex-direction: column; gap: 18px">
-<span style="width: 44px; height: 44px; border-radius: 12px; background: #1E2330; color: #9AA8FF; display: flex; align-items: center; justify-content: center"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="8" r="3.5"></circle><path d="M2.5 20a6.5 6.5 0 0 1 13 0M16 4.5a3.5 3.5 0 0 1 0 7M18.5 14a6.5 6.5 0 0 1 3 6"></path></svg></span>
-<h3 style="margin: 0; font-family: 'Space Grotesk', sans-serif; font-size: 21px; font-weight: 600">Delivery</h3>
-<p style="margin: 0; color: #A7AFBD; font-size: 15px">Agile delivery, client communication, UX writing, usability testing, A/B experimentation, mentoring.</p>
-</div>
-
-</div>
-</div>
-</section>
-
-<!-- EDUCATION -->
-<section id="education" class="sec" style="padding: 120px 24px">
-<div style="max-width: 1200px; margin: 0 auto; display: flex; flex-wrap: wrap; gap: 48px">
-<div style="flex: 1 1 300px; display: flex; flex-direction: column; gap: 14px">
-<span style="font-family: 'JetBrains Mono', monospace; font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase; color: #9AA8FF">04 — Education</span>
-<h2 style="margin: 0; font-family: 'Space Grotesk', sans-serif; font-size: clamp(34px, 4vw, 52px); line-height: 1.08; letter-spacing: -0.025em; font-weight: 700">Grounded in computer science</h2>
-</div>
-<div style="flex: 999 1 560px; min-width: 0; display: flex; flex-direction: column">
-<div style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px; padding: 24px 0; border-top: 1px solid #1F2430">
-<div style="display: flex; flex-direction: column; gap: 2px"><span style="font-family: 'Space Grotesk', sans-serif; font-size: 20px; font-weight: 600">Master of Computer Applications</span><span style="color: #A7AFBD; font-size: 15px">Kalinga Institute of Industrial Technology</span></div>
-<div class="edu-meta" style="display: flex; flex-direction: column; align-items: flex-end; gap: 2px"><span style="font-family: 'JetBrains Mono', monospace; font-size: 14px">2021</span><span style="color: #A7AFBD; font-size: 14px">8.06 CGPA</span></div>
-</div>
-<div style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px; padding: 24px 0; border-top: 1px solid #1F2430">
-<div style="display: flex; flex-direction: column; gap: 2px"><span style="font-family: 'Space Grotesk', sans-serif; font-size: 20px; font-weight: 600">B.Sc. Computer Science</span><span style="color: #A7AFBD; font-size: 15px">KC College, University of Mumbai</span></div>
-<div class="edu-meta" style="display: flex; flex-direction: column; align-items: flex-end; gap: 2px"><span style="font-family: 'JetBrains Mono', monospace; font-size: 14px">2019</span><span style="color: #A7AFBD; font-size: 14px">8.76 CGPA</span></div>
-</div>
-<div style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px; padding: 24px 0; border-top: 1px solid #1F2430; border-bottom: 1px solid #1F2430">
-<div style="display: flex; flex-direction: column; gap: 2px"><span style="font-family: 'Space Grotesk', sans-serif; font-size: 20px; font-weight: 600">GNIIT — Cloud &amp; Mobile Software Engineering</span><span style="color: #A7AFBD; font-size: 15px">NIIT Limited</span></div>
-<div class="edu-meta" style="display: flex; flex-direction: column; align-items: flex-end; gap: 2px"><span style="font-family: 'JetBrains Mono', monospace; font-size: 14px">Grade A</span></div>
-</div>
-</div>
-</div>
-</section>
-
-<!-- RESUME -->
-<section id="resume" class="sec-b" style="padding: 0 24px 120px">
-<div style="max-width: 1200px; margin: 0 auto; border: 1px solid #222734; border-radius: 28px; background: #12151D; padding: clamp(32px, 5vw, 64px); display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 40px">
-<div style="flex: 1 1 420px; min-width: 0; display: flex; flex-direction: column; gap: 14px">
-<span style="font-family: 'JetBrains Mono', monospace; font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase; color: #9AA8FF">05 — Resume</span>
-<h2 style="margin: 0; font-family: 'Space Grotesk', sans-serif; font-size: clamp(30px, 3.6vw, 46px); line-height: 1.08; letter-spacing: -0.025em; font-weight: 700">Want to hire me?</h2>
-<p style="margin: 0; max-width: 520px; font-size: 17px; color: #A7AFBD">Download my resume with experience, projects, skills and education in one PDF.</p>
-</div>
-<div style="flex: 0 1 auto; display: flex; flex-wrap: wrap; align-items: center; gap: 20px">
-<div aria-hidden="true" style="width: 72px; height: 92px; border-radius: 10px; border: 1px solid #343B4C; background: #0B0D12; display: flex; flex-direction: column; justify-content: center; gap: 7px; padding: 0 14px; box-sizing: border-box">
-<span style="height: 5px; width: 60%; border-radius: 3px; background: #9AA8FF"></span>
-<span style="height: 4px; width: 100%; border-radius: 3px; background: #262B38"></span>
-<span style="height: 4px; width: 85%; border-radius: 3px; background: #262B38"></span>
-<span style="height: 4px; width: 100%; border-radius: 3px; background: #262B38"></span>
-<span style="height: 4px; width: 70%; border-radius: 3px; background: #262B38"></span>
-</div>
-<div style="display: flex; flex-direction: column; gap: 10px">
-<a class="btn-primary" href="https://drive.google.com/drive/folders/1J_nAT-VkVMBk7RbEAHFF4E6pAlUC2xEJ?usp=drive_link" target="_blank" rel="noopener noreferrer" style="display: inline-flex; align-items: center; gap: 10px; min-height: 52px; padding: 0 26px; border-radius: 999px; background: #9AA8FF; color: #0B0D12; font-weight: 600; box-sizing: border-box">
-<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v11M7 10l5 5 5-5M5 20h14"></path></svg>
-Download resume</a>
-<span style="font-family: 'JetBrains Mono', monospace; font-size: 13px; color: #8A93A3">PDF · Updated 2026</span>
-</div>
-</div>
-</div>
-</section>
-
-<!-- CONTACT -->
-<section id="contact" class="sec-b" style="padding: 0 24px 96px">
-<div style="position: relative; max-width: 1200px; margin: 0 auto; border-radius: 32px; background: #9AA8FF; color: #0B0D12; padding: clamp(40px, 7vw, 88px); overflow: hidden; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 40px">
-<div style="display: flex; flex-direction: column; gap: 18px; max-width: 640px">
-<span style="font-family: 'JetBrains Mono', monospace; font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase; opacity: 0.75">06 — Contact</span>
-<h2 style="margin: 0; font-family: 'Space Grotesk', sans-serif; font-size: clamp(36px, 5vw, 64px); line-height: 1.02; letter-spacing: -0.03em; font-weight: 700">Have a bot that should be smarter? Let’s talk.</h2>
-<p style="margin: 0; font-size: 18px; opacity: 0.8">Open to conversations about conversational AI, prompt engineering and GenAI product work.</p>
-</div>
-<div class="contact-links" style="display: flex; flex-direction: column; gap: 12px; min-width: 260px">
-<a href="mailto:rohanbiswal12345@gmail.com" style="display: flex; align-items: center; gap: 12px; min-height: 56px; padding: 0 22px; border-radius: 16px; background: #0B0D12; color: #ECEEF2; font-weight: 500">
-<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"></rect><path d="M3 7l9 6 9-6"></path></svg>
-rohanbiswal12345@gmail.com</a>
-<a href="https://www.linkedin.com/in/rohanbiswal" style="display: flex; align-items: center; gap: 12px; min-height: 56px; padding: 0 22px; border-radius: 16px; border: 1.5px solid #0B0D12; color: #0B0D12; font-weight: 500">
-<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="3"></rect><path d="M8 10v7M8 7v.01M12 17v-4a2 2 0 0 1 4 0v4M12 10v7"></path></svg>
-LinkedIn</a>
-</div>
-</div>
-</section>
-
-<footer style="border-top: 1px solid #1C202B">
-<div style="max-width: 1200px; margin: 0 auto; padding: 28px 24px; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px; font-size: 14px; color: #8A93A3">
-<span>© 2026 Rohan Biswal</span>
-<span style="font-family: 'JetBrains Mono', monospace">Bangalore, India</span>
-</div>
+<footer>
+  <div class="wrap"><span>© 2026 Rohan Biswal</span><span>Designed and prompted in Bangalore</span></div>
 </footer>
 
-</div>
+<script>
+(function(){
+  var RESUME="https://drive.google.com/drive/folders/1J_nAT-VkVMBk7RbEAHFF4E6pAlUC2xEJ?usp=drive_link";
+  var EMAIL="mailto:rohanbiswal12345@gmail.com";
+  var reduce=window.matchMedia&&window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  var log=document.getElementById("log"), suggest=document.getElementById("suggest");
+  var form=document.getElementById("composer"), input=document.getElementById("ask");
+  var chat=document.getElementById("chat"), toggle=document.getElementById("nluToggle");
+  var busy=false, misses=0;
+
+  var DEFAULT_SUGGEST=["Who is Rohan?","What has he shipped?","How does he write prompts?","Show me results","Can I hire him?"];
+
+  var INTENTS={
+    greet:{kw:["hi","hello","hey","hola","namaste","yo"],
+      say:["Hi! Ask me anything about Rohan’s work, or tap a suggestion below."]},
+    about:{kw:["who","rohan","about","yourself","introduce","background","summary"],
+      say:["Rohan is a conversational AI lead and prompt engineer with 6+ years building chat, voice and GenAI experiences.","He’s currently a Senior CxD Designer (Prompt Engineer) at Optum in Bangalore."],
+      next:["What has he shipped?","How does he write prompts?"]},
+    experience:{kw:["shipped","experience","worked","work","companies","company","clients","client","projects","project","optum","jio","haptik","pharma","mresult","built","career","jobs"],
+      say:["A few highlights:<ul><li>Healthcare GenAI at Optum, right now</li><li>Chat and voice bots for Fortune 500 clients, including a top‑5 global pharma company, at MResult</li><li>Jio’s high-traffic platforms at Haptik</li></ul>"],
+      actions:[["See full experience","#experience"]],
+      next:["Show me results","What tools does he use?"]},
+    prompt:{kw:["prompt","prompts","prompting","llm","llms","rag","genai","approach","process","write","writes","engineering","method"],
+      say:["He treats prompts as living systems: design the conversation, engineer the prompt with RAG grounding, add custom code where low-code runs out, then test and refine with A/B experiments and real feedback."],
+      actions:[["See a prompt taken apart","#how"]],
+      next:["Show me results","Can I hire him?"]},
+    results:{kw:["results","result","impact","numbers","metrics","outcomes","achievements","achieved","kpi","kpis","roi"],
+      say:["From bots he’s shipped:<ul><li>50% fewer escalations to human agents</li><li>Up to 70% of manual case-handling steps automated</li><li>25%+ fewer drop-offs</li><li>20–30% higher engagement</li></ul>"],
+      next:["How does he write prompts?","Can I hire him?"]},
+    skills:{kw:["skills","skill","tools","tool","platforms","platform","stack","kore","genesys","dialogflow","salesforce","python","node","tech","technologies","languages","code"],
+      say:["Platforms: Kore.ai, Genesys, Dialogflow and Salesforce. Code: Python, Node.js, REST APIs and SQL. Plus ASR, TTS, NLU and RAG."],
+      actions:[["See the toolkit","#toolkit"]],
+      next:["What has he shipped?","Where did he study?"]},
+    education:{kw:["education","degree","study","studied","college","mca","university","qualification","qualifications","kiit"],
+      say:["An MCA from KIIT (2021, 8.06 CGPA) and a B.Sc. in Computer Science from KC College, University of Mumbai (2019, 8.76 CGPA)."],
+      next:["What has he shipped?","Can I hire him?"]},
+    hire:{kw:["hire","hiring","resume","cv","contact","email","available","availability","job","open","reach","talk","recruit","recruiter","interview","connect"],
+      say:["Yes! He’s open to conversations about conversational AI, prompt engineering and GenAI product work."],
+      actions:[["Download resume",RESUME,true],["Email Rohan",EMAIL]],
+      next:["Who is Rohan?","Show me results"]},
+    thanks:{kw:["thanks","thank","thx","cool","great","awesome","nice","ok","okay"],
+      say:["Anytime. Anything else you’d like to know?"]}
+  };
+
+  function tokenize(t){return t.toLowerCase().replace(/[^a-z0-9.\s]/g," ").split(/\s+/).filter(Boolean)}
+  function classify(text){
+    var toks=tokenize(text), best=null, bestHits=[], bestScore=0;
+    Object.keys(INTENTS).forEach(function(name){
+      var hits=INTENTS[name].kw.filter(function(k){return toks.indexOf(k)>-1});
+      var score=hits.length - (name==="greet"||name==="thanks"?0.5:0);
+      if(hits.length && score>bestScore){best=name;bestScore=score;bestHits=hits}
+    });
+    if(!best) return {intent:null,conf:0,hits:[]};
+    var conf=Math.min(0.97,0.62+0.14*bestHits.length+(toks.length<=4?0.06:0));
+    return {intent:best,conf:conf,hits:bestHits};
+  }
+
+  function el(tag,cls,html){var e=document.createElement(tag);if(cls)e.className=cls;if(html!=null)e.innerHTML=html;return e}
+  function scroll(){log.scrollTop=log.scrollHeight}
+  function esc(s){return s.replace(/[&<>"]/g,function(c){return{"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]})}
+
+  function setSuggest(list){
+    suggest.innerHTML="";
+    (list||DEFAULT_SUGGEST).forEach(function(q){
+      var b=el("button","chip");b.type="button";b.textContent=q;
+      b.addEventListener("click",function(){send(q)});
+      suggest.appendChild(b);
+    });
+  }
+
+  function botSay(lines,actions,next,done){
+    var i=0;
+    function step(){
+      if(i>=lines.length){
+        if(actions&&actions.length){
+          var row=el("div","msg-actions");
+          actions.forEach(function(a){
+            var l=el("a");l.href=a[1];l.textContent=a[0];
+            if(a[2]){l.target="_blank";l.rel="noopener noreferrer"}
+            row.appendChild(l);
+          });
+          log.appendChild(row);scroll();
+        }
+        setSuggest(next);scroll();busy=false;if(done)done();return;
+      }
+      var t=el("div","typing");t.setAttribute("aria-hidden","true");t.innerHTML="<i></i><i></i><i></i>";
+      log.appendChild(t);scroll();
+      var plain=lines[i].replace(/<[^>]+>/g,"");
+      var wait=reduce?120:Math.min(1300,450+plain.length*9);
+      setTimeout(function(){t.remove();log.appendChild(el("div","msg bot",lines[i]));scroll();i++;step()},wait);
+    }
+    busy=true;step();
+  }
+
+  function send(text){
+    text=(text||"").trim();
+    if(!text||busy) return;
+    log.appendChild(el("div","msg user",esc(text)));
+    var r=classify(text);
+    var tag=el("div","nlu");
+    if(r.intent){
+      misses=0;
+      tag.innerHTML="intent <b>"+r.intent+"</b>, confidence <b>"+Math.round(r.conf*100)+"%</b>, matched “"+r.hits.join("”, “")+"”";
+      log.appendChild(tag);scroll();
+      var it=INTENTS[r.intent];
+      var linkActions=(it.actions||[]).slice();
+      botSay(it.say,linkActions,it.next);
+    }else{
+      misses++;
+      tag.innerHTML="intent <b>none</b>, fallback <b>"+Math.min(misses,2)+" of 2</b>";
+      log.appendChild(tag);scroll();
+      if(misses<2){
+        botSay(["I didn’t catch that. I can tell you about Rohan’s experience, results, prompt approach, tools or how to hire him."],null,null);
+      }else{
+        misses=0;
+        botSay(["Still not getting it, sorry. The quickest route is to ask Rohan directly."],[["Email Rohan",EMAIL]],null);
+      }
+    }
+  }
+
+  form.addEventListener("submit",function(e){e.preventDefault();var v=input.value;if(busy)return;input.value="";send(v)});
+  toggle.addEventListener("click",function(){
+    var on=toggle.getAttribute("aria-pressed")!=="true";
+    toggle.setAttribute("aria-pressed",on?"true":"false");
+    chat.classList.toggle("show-nlu",on);
+    scroll();
+  });
+  log.addEventListener("click",function(e){
+    var a=e.target.closest("a");
+    if(a&&a.getAttribute("href").charAt(0)==="#"){e.preventDefault();var t=document.querySelector(a.getAttribute("href"));if(t)t.scrollIntoView({behavior:reduce?"auto":"smooth"})}
+  });
+
+  setSuggest([]);
+  botSay(["Hi, I’m a small bot Rohan built to answer questions about his work.","Ask me anything, or tap a suggestion."],null,DEFAULT_SUGGEST);
+
+  /* prompt anatomy */
+  var WHY={
+    role:["Role","A clear role sets scope before anything else. The model knows who it serves and, just as importantly, what it isn’t there to do."],
+    context:["Grounding","Tying answers to retrieved context is what makes RAG trustworthy. Saying “I don’t know” beats a confident wrong answer every time."],
+    rules:["Guardrails","Hard rules handle risk and compliance. “One question at a time” is a conversation-design rule: it keeps people from dropping off."],
+    fallback:["Fallback","Every bot misunderstands sometimes. A planned exit to a human protects the experience and is how escalations stay useful, not frustrating."],
+    format:["Output","Length and tone limits keep replies readable on a phone and consistent across thousands of conversations."]
+  };
+  var segs=[].slice.call(document.querySelectorAll(".seg"));
+  segs.forEach(function(s){
+    s.addEventListener("click",function(){
+      segs.forEach(function(o){o.setAttribute("aria-pressed",o===s?"true":"false")});
+      var w=WHY[s.dataset.k];
+      document.getElementById("whyTitle").textContent=w[0];
+      document.getElementById("whyText").textContent=w[1];
+      document.getElementById("whyHint").textContent="Tap another part of the prompt.";
+    });
+  });
+
+  /* experience tabs */
+  var tabs=[].slice.call(document.querySelectorAll('[role="tab"]'));
+  function select(tab,focus){
+    tabs.forEach(function(t){
+      var on=t===tab;
+      t.setAttribute("aria-selected",on?"true":"false");
+      t.tabIndex=on?0:-1;
+      document.getElementById(t.getAttribute("aria-controls")).hidden=!on;
+    });
+    if(focus)tab.focus();
+    tab.scrollIntoView({block:"nearest",inline:"nearest",behavior:reduce?"auto":"smooth"});
+  }
+  tabs.forEach(function(t,i){
+    t.addEventListener("click",function(){select(t,false)});
+    t.addEventListener("keydown",function(e){
+      var k=e.key, n=null;
+      if(k==="ArrowDown"||k==="ArrowRight")n=tabs[(i+1)%tabs.length];
+      if(k==="ArrowUp"||k==="ArrowLeft")n=tabs[(i-1+tabs.length)%tabs.length];
+      if(k==="Home")n=tabs[0]; if(k==="End")n=tabs[tabs.length-1];
+      if(n){e.preventDefault();select(n,true)}
+    });
+  });
+})();
+</script>
 </body>
 </html>
